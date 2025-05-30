@@ -19,7 +19,7 @@ git clone https://github.com/samir-otero/otero_samir_coding_assignment11.git
 cd otero_samir_coding_assignment11
 ```
 
-### 2.Start the Application
+### 2. Start the Application
 ```bash
 docker compose up --build
 ```
@@ -27,3 +27,11 @@ docker compose up --build
 Once the container is running, open your browser and go to:
 http://localhost:7775
 
+### Note
+Although the Dockerfile exposes port 7775, the React dev server runs on port 3000. The port exposed here is symbolic unless the server is actually configured to run on 7775.
+
+- 3000 is the default port the React dev server runs on inside the container.
+
+- 7775:3000 tells Docker to map container port 3000 to host port 7775.
+
+- As a result, when you visit http://localhost:7775, traffic is redirected to the React server running inside the container.
