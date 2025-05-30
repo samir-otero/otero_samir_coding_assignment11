@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: otero_samir_coding_assignment11
+    image: otero_samir_coding_assignment11
+    build:
+      context: .
+      target: production

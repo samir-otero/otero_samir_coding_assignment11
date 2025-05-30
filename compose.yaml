@@ -1,0 +1,12 @@
+
+services:
+  app:
+    container_name: otero_samir_coding_assignment11
+    image: otero_samir_coding_assignment11
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+    - 7775:3000
